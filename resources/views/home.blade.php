@@ -51,7 +51,7 @@
             ['@type' => 'WebSite', '@id' => $url.'#website', 'url' => $url, 'name' => 'Ascend.com', 'description' => $description, 'inLanguage' => 'en', 'copyrightHolder' => ['@id' => 'https://coherence.com/#organization'], 'publisher' => ['@id' => 'https://coherence.com/#organization'], 'creator' => ['@id' => 'https://qquantum.ai/#organization']],
             ['@type' => 'Organization', '@id' => 'https://coherence.com/#organization', 'name' => 'Coherence', 'legalName' => 'Booth.com Ltd', 'url' => 'https://coherence.com/'],
             ['@type' => 'Organization', '@id' => 'https://qquantum.ai/#organization', 'name' => 'QQuantum.ai', 'url' => 'https://qquantum.ai/', 'description' => 'AI systems engineering studio in Barcelona — brand identity, logo and web design, AI agents and custom AI systems.'],
-            ['@type' => 'WebPage', '@id' => $url.'#webpage', 'url' => $url, 'name' => $title, 'description' => $description, 'isPartOf' => ['@id' => $url.'#website'], 'about' => ['@id' => $url.'#domain'], 'inLanguage' => 'en'],
+            ['@type' => 'WebPage', '@id' => $url.'#webpage', 'url' => $url, 'name' => $title, 'description' => $description, 'isPartOf' => ['@id' => $url.'#website'], 'about' => ['@id' => $url.'#domain'], 'inLanguage' => 'en', 'primaryImageOfPage' => ['@type' => 'ImageObject', 'url' => $url.'og-image.png', 'width' => 1200, 'height' => 630]],
             [
                 '@type' => 'Product', '@id' => $url.'#domain', 'name' => 'Ascend.com', 'category' => 'Premium .com domain name',
                 'description' => 'Ascend.com is an elite-level .com domain, registered in 1990 and previously owned by Nokia, brokered by ATM Holdings.',
@@ -153,7 +153,12 @@ SVG;
 <meta property="og:url" content="{{ $url }}">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://ascend.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ascend.com is for sale — one of the world’s elite .com domains, registered 1990, brokered by ATM Holdings">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ascend.com/og-image.png">
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description }}">
 <meta name="theme-color" content="#F6F6F3" media="(prefers-color-scheme: light)">

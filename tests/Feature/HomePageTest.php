@@ -31,3 +31,11 @@ it('shows the Booth.com Ltd footer with the Coherence credit', function () {
         ->assertSee('https://qquantum.ai/creative-design/brand-identity-logos', false)
         ->assertSee('https://coherence.com', false);
 });
+
+it('has a large social sharing image', function () {
+    expect(file_exists(public_path('og-image.png')))->toBeTrue();
+
+    $this->get('/')
+        ->assertSee('<meta property="og:image" content="https://ascend.com/og-image.png">', false)
+        ->assertSee('<meta name="twitter:card" content="summary_large_image">', false);
+});
