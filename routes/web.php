@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome')->name('home');
+Route::view('/', 'home')->name('home');
 
 // Private identity review for the client. Kept out of search engines and AI
 // crawlers by this header plus the robots meta tags in the view. Deliberately
