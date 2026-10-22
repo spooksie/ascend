@@ -28,7 +28,9 @@ it('credits QQuantum.ai in the footer', function () {
 it('shows the Booth.com Ltd footer with the Coherence credit', function () {
     $this->get('/')
         ->assertSee('Booth.com Ltd. All Rights Reserved.', false)
-        ->assertSee('https://qquantum.ai/creative-design/brand-identity-logos', false)
+        ->assertSee('https://qquantum.ai/creative-design/domain-landing-pages', false)
+        ->assertSee('viewBox="3.00 3.00 275.00 58.00"', false)
+        ->assertDontSee('q8 -12 16 0', false)
         ->assertSee('https://coherence.com', false);
 });
 
