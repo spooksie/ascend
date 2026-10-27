@@ -25,9 +25,10 @@ it('credits QQuantum.ai in the footer', function () {
     $this->get('/')->assertSee('https://qquantum.ai', false);
 });
 
-it('shows the Booth.com Ltd footer with the Coherence credit', function () {
+it('shows the Coherence footer with the Coherence credit', function () {
     $this->get('/')
-        ->assertSee('Booth.com Ltd. All Rights Reserved.', false)
+        ->assertSee('Coherence. All Rights Reserved.', false)
+        ->assertDontSee('Booth.com', false)
         ->assertSee('https://qquantum.ai/creative-design/domain-landing-pages', false)
         ->assertSee('viewBox="3.00 3.00 275.00 58.00"', false)
         ->assertDontSee('q8 -12 16 0', false)
